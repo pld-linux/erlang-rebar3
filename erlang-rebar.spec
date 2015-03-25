@@ -1,6 +1,6 @@
 
 %bcond_with	bootstrap	# bootstrap build
-%bcond_without	tests		# build without tests
+%bcond_with	tests		# build without tests
 
 Summary:	Erlang Build Tools
 Name:		erlang-rebar
