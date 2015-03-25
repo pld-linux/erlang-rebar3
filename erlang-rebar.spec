@@ -38,6 +38,10 @@ rebar compile -v
 install %{SOURCE1} ./rebar
 %endif
 
+%if %{with tests}
+./rebar eunit -v
+%endif
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
@@ -48,10 +52,6 @@ cp -p ebin/rebar.app $RPM_BUILD_ROOT%{_libdir}/erlang/lib/rebar-%{version}/ebin
 cp -p ebin/*.beam $RPM_BUILD_ROOT%{_libdir}/erlang/lib/rebar-%{version}/ebin
 cp -p include/*.hrl $RPM_BUILD_ROOT%{_libdir}/erlang/lib/rebar-%{version}/include
 cp -a priv $RPM_BUILD_ROOT%{_libdir}/erlang/lib/rebar-%{version}
-
-%if %{with tests}
-./rebar eunit -v
-%endif
 
 %files
 %defattr(644,root,root,755)
