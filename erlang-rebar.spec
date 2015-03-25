@@ -5,7 +5,7 @@
 Summary:	Erlang Build Tools
 Name:		erlang-rebar
 Version:	2.5.1
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		Development/Tools
 Source0:	https://github.com/rebar/rebar/tarball/%{version}/rebar-%{version}.tar.bz2
