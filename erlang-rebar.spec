@@ -29,6 +29,10 @@ Erlang Build Tools.
 mv rebar-rebar-*/* .
 %{__rm} -r rebar-rebar-*
 
+%{__sed} -i -e '1s,/usr/bin/env escript,/usr/bin/escript,' \
+	priv/templates/simplenode.install_upgrade.escript \
+	priv/templates/simplenode.nodetool
+
 %build
 %if %{with bootstrap}
 ./bootstrap
