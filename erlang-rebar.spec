@@ -4,12 +4,12 @@
 
 Summary:	Erlang Build Tools
 Name:		erlang-rebar
-Version:	2.5.1
+Version:	2.6.4
 Release:	1
 License:	MIT
 Group:		Development/Tools
 Source0:	https://github.com/rebar/rebar/tarball/%{version}/rebar-%{version}.tar.bz2
-# Source0-md5:	b9b21756f56902b339559f3833d2c544
+# Source0-md5:	d5083a6bcb0df31e809d5bb0d6be502e
 Source1:	rebar.escript
 URL:		https://github.com/rebar/rebar
 %if %{with bootstrap}
@@ -59,7 +59,7 @@ cp -a priv $RPM_BUILD_ROOT%{_libdir}/erlang/lib/rebar-%{version}
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE NOTES.org README.md THANKS rebar.config.sample
+%doc LICENSE README.md THANKS rebar.config.sample
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/rebar
 %{_libdir}/erlang/lib/rebar-%{version}
