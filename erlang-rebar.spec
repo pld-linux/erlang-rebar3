@@ -12,12 +12,12 @@ Source0:	https://github.com/rebar/rebar/tarball/%{version}/rebar-%{version}.tar.
 # Source0-md5:	d5083a6bcb0df31e809d5bb0d6be502e
 Source1:	rebar.escript
 URL:		https://github.com/rebar/rebar
-%if %{with bootstrap}
-BuildRequires:	erlang
-%else
+BuildRequires:	erlang >= 2:17
+%if %{without bootstrap}
 BuildRequires:	erlang-rebar
 %endif
-Requires:	erlang
+BuildRequires:	rpmbuild(macros) >= 2.035
+%{?erlang_requires}
 Provides:	rebar = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
