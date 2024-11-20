@@ -21,6 +21,8 @@ BuildRequires:	rpmbuild(macros) >= 2.035
 Provides:	rebar = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_enable_debug_packages	0
+
 %description
 Erlang Build Tools.
 
