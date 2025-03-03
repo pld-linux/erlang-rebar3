@@ -2,4 +2,4 @@
 %%! -noshell -noinput
 
 main (Args) ->
-	rebar:main(Args).
+	rebar3:main(Args).
